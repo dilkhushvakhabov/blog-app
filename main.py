@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index_view():
+    print('hello world')
     return render_template('index.html', ppp=get_posts(), name='Aziz')
 
 
