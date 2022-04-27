@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    {% if post %}
+        <div>
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.content }}</p>
+        </div>
+    {% else %}
+        <h1>Post topilmadi</h1>
+    {% endif %}
+
+    
+    
+{% endblock %}

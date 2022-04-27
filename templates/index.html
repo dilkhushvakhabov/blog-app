@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QALEEE</title>
-</head>
-<body>
-    {% for post in ppp %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.content }}</p>
-    {% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+
+{% for post in ppp %}
+   
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content | truncate}}</p>
+    <a href="{{ post.id }}/" class="btn btn-success w-25">davomi . . .</a>
+ 
+    
+{% endfor %}
+
+{% endblock %}
